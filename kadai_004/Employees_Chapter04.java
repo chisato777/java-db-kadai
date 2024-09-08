@@ -18,11 +18,11 @@ public class Employees_Chapter04 {
 					"root",
 					"@CY0718ramu");
 
-			System.out.println("データベース接続成功");
+			System.out.println("データベース接続成功:"+con);
 
 			statement = con.createStatement();
 			String sql = """
-					CREATE TABLE employees (
+					CREATE TABLE IF NOT EXISTS employees (
 					  id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
 					  name VARCHAR(60) NOT NULL,
 					  email VARCHAR(255) NOT NULL,
